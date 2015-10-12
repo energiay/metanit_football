@@ -7,7 +7,7 @@
 <div>
     <h1>Каталог Игроков</h1>
 
-    <p>@Html.ActionLink("Создать Игрока", "Create", "Players") | @Html.ActionLink("Создать команду", "Create", "Teams")</p>
+    <p>@Html.ActionLink("Создать Игрока", "Create") | @Html.ActionLink("Создать команду", "Create", "Teams")</p>
 
     
 
@@ -29,7 +29,7 @@
                 <td>@Html.DisplayFor(modelItem => item.Age)</td>
                 <td>@Html.DisplayFor(modelItem => item.Position)</td>
                 <td>@Html.DisplayFor(modelItem => item.Team.Name)</td>
-                <td>@Html.ActionLink("Редактировать", "Edit", "Players", new { id = item.Id },null) |
+                <td>@Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
                     @Html.ActionLink("Удалить", "Delete", "Players", new { id = item.Id }, null)</td>
             </tr>
         }
